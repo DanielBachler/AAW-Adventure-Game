@@ -1,3 +1,10 @@
+/**
+ * Daniel Bachler
+ * Choose your own adventure game for LIT-169 Assignment 1
+ * A simple text based choose your own adventure game based roughly on the
+ * original Alice in Wonderland novel by Lewis Carroll
+ */
+
 package com.company;
 
 import java.util.Scanner;
@@ -29,8 +36,12 @@ public class Main {
 
     //Cleans the input to just an integer
     private static int cleanInput(String input) {
-
-        //Place holder
-        return 0;
+        if(input.contains("1")) {
+            return 1;
+        } else if(input.contains("2")) {
+            return 2;
+        } else {
+            return 0;
+        }
     }
 }

@@ -15,6 +15,8 @@ public class Main {
     private static Random randy = new Random();
     //The scanner for user input
     private static Scanner userInput = new Scanner(System.in);
+    //Array of food items available
+    private static String[] foodItems = {"Muffin", "Cupcake", "Cake", "Soup", "Tea", "Mystery liquid"};
 
     public static void main(String[] args) {
         //Creates player object
@@ -48,7 +50,14 @@ public class Main {
             System.out.println("You choose to consume an item off the table");
             changePlayerHeight(p);
         } else if(cleanInput(choice1) == 2) {
-            System.out.println();
+            //Temporary new food
+            Food temp = new Food();
+            //Gets the food itself from master list
+            temp.setName(foodItems[randy.nextInt(foodItems.length-1)]);
+            //Tells player what they picked up
+            System.out.printf("You pickup a %s and put it into your bag", temp.getName());
+            //Adds item to player inventory
+            p.inventory.add(temp);
         }
     }
 

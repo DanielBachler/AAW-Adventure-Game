@@ -16,7 +16,7 @@ public class Main {
     //The scanner for user input
     private static Scanner userInput = new Scanner(System.in);
     //Array of food items available
-    private static String[] foodItems = {"Muffin", "Cupcake", "Cake", "Soup", "Tea", "Mystery liquid"};
+    private static Food[] foodItems = {new Food("Muffin", 1), new Food( "Cupcake", -1),new Food( "Cake", 1), new Food("Soup", -1), new Food("Tea", 1), new Food("Mystery liquid", -1)};
 
     public static void main(String[] args) {
         //Creates player object
@@ -48,12 +48,14 @@ public class Main {
         //Branch one
         if(cleanInput(choice1) == 1) {
             System.out.println("You choose to consume an item off the table");
-            changePlayerHeight(p);
+            Food temp = foodItems[randy.nextInt(foodItems.length-1)];
+            System.out.println("You picked a " + temp.getName() + " off the table");
+            changePlayerHeight(p, temp);
         } else if(cleanInput(choice1) == 2) {
             //Temporary new food
-            Food temp = new Food();
+            Food temp;
             //Gets the food itself from master list
-            temp.setName(foodItems[randy.nextInt(foodItems.length-1)]);
+            temp = foodItems[randy.nextInt(foodItems.length-1)];
             //Tells player what they picked up
             System.out.printf("You pickup a %s and put it into your bag", temp.getName());
             //Adds item to player inventory
@@ -73,25 +75,11 @@ public class Main {
     }
 
     //Grows or shrinks the player
-    private static void changePlayerHeight(Player p) {
-        //Decides if growing or shrinking
-        boolean grow = randy.nextBoolean();
-        //Determines amount grown or shrunk
-        double change = randy.nextDouble() + randy.nextInt(4);
-
-        //Decides players new height
-        if(grow) { //Grows
-            p.setPlayerHeight(p.getPlayerHeight() + change);
-        } else { //Shrinks
-            double newHeight = p.getPlayerHeight() - change;
-            //If player would shrink into negative sets height to 0.1ft
-            if(newHeight > 0) {
-                p.setPlayerHeight(newHeight);
-            } else {
-                p.setPlayerHeight(0.1);
-            }
-        }
+    private static void changePlayerHeight(Player p, Food selected) {
+        //Changes with the given food item
+        boolean grow = (selected.getChangeAmount() > 0);
+        p.setPlayerHeight(p.getPlayerHeight() + selected.getChangeAmount());
         //Gets and displays new character height
-        System.out.printf("Your character %s!\nYour new height is %.2f", (grow? "grew" : "shrunk"), p.getPlayerHeight());
+        System.out.printf("Your character %s!\nYour new height is %.2f(ft)\n", (grow? "grew" : "shrunk"), p.getPlayerHeight());
     }
 }

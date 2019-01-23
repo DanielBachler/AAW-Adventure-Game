@@ -132,13 +132,13 @@ public class Main {
         if(choice == 1) { //Choice 1 p1, goto 2
             System.out.println("You ask the animals for some help drying yourself off.");
         } else { //Choice 1, p2, goto 3
-            System.out.println("The animals seem to ignore you shouting at them.  You yell why are you ignoring me!");
+            System.out.println("The animals seem to ignore you shouting at them.  You yell \"Why are you ignoring me!\"");
         }
         //3
         System.out.println("A mouse who seems to be the leader of the little group yell out loudly\n" +
                 "\"How about we have a caucus race?\"\n" +
                 ((choice == 1)? "It will help you dry off the mouse says to you\n" : "") +
-                "Do you decide to join in their race (1) or sit out by yourself? (2)");
+                "Do you decide to: \nJoin in their race (1)\nSit out by yourself? (2)");
         choice = cleanInput(userInput.nextLine());
         if(choice == 1){ //choice #2 p1, goto 5
             //5
@@ -149,7 +149,7 @@ public class Main {
         }
         //Prize demand from 4 and 5
         System.out.println("After the race ends the animals surround you and begin to demand a prize for their efforts.\n" +
-                "Do you give them some sweets you have in your pockets (1)?\nOr do you refuse to give them anything because the whole situation is ridiculous (2)");
+                "Do you:\n(1) Give them some sweets you have in your pockets?\n(2) Or do you refuse to give them anything because the whole situation is ridiculous");
         choice = cleanInput(userInput.nextLine());
         int choiceExtend;
         if(choice == 1) { //Choice 3 p1, goto 7

@@ -1,0 +1,108 @@
+﻿Chapter 7
+
+
+1. You come across a house. You can see a tea party going on with a Hatter, a Hare, and a Dormouse. You approach. They start yelling “no room!”
+   1. Sit down anyway -> 2
+   2. Leave -> 12
+1. They look at you a bit contemptuously, then ignore you until the hatter asks “How is a raven like a writing desk?”
+   1. I don’t know -> 3
+   2. What kind of question is that -> 4
+   3. Leave -> 12
+1. The Hatter says he doesn’t know either and asks if you would like some tea
+2. The Hatter says it’s a riddle he doesn’t know the answer to and asks if you would like some tea
+   1. Decline -> 5
+   2. Accept -> 6
+   3. Leave -> 12
+1. The Hatter asks you if you know Time
+2. The Hatter pours you a drink and asks if you know Time
+   1. I have no idea what time it is -> 7
+   2. I would assume it’s tea time -> 8
+   3. Leave -> 12
+1. The Hatter explains that time isn’t an “it” but a “he” and that he’s frozen them at tea time
+2. The Hatter explains that it’s always tea time because Time has frozen it there for him
+   1. That’s ridiculous -> 13
+   2. How unfortunate -> 9
+   3. Leave -> 12
+1. The Hatter agrees and then suggests the Dormouse tell a story
+   1. Tell the Dormouse about your cat -> 14
+   2. Listen to the story -> 10
+   3. Leave -> 12
+1. After the story the tea party continues, with them just chattering and then offering a cup of tea
+   1. Accept the tea -> 11
+   2. Thank them and leave -> 15
+   3. Leave -> 12
+1. The party continues, with them chattering and offering a cup of tea
+   1. Accept the tea -> 11
+   2. Thank them and leave -> 15
+   3. Leave -> 12
+1. You decide that the tea party is quite ridiculous and not at all a place you’d like to stay at. You leave
+2. The Hatter doesn’t appreciate your remark and asks you to leave the party. You decide it best not to argue and leave
+3. The Dormouse starts to freak out at the mention of a cat and the Hatter and Hare calm him and insist that you leave. You decide it best not to argue and leave
+4. You thank the Hatter, Hare, and Dormouse for allowing you to join their tea party, but you must be on your way.
+Go to Chapter 8
+________________
+Chapter 8
+
+
+1. You keep traveling until you come to a garden where a group of people are painting white roses red.
+   1. Leave them to it -> 3
+   2. Ask what they’re doing -> 2
+1. The gardener’s explain how they were supposed to plant red roses but they planted white and have to paint them before the queen finds out. Suddenly, the sound of trumpets and the Queen’s procession goes by. She gets angry about the roses and shouts “Off with their heads”. She looks at you and asks if you play croquet.
+2. They continue frantically working. Suddenly, the sound of trumpets and the Queen’s procession goes by. She gets angry about the roses and shouts “Off with their heads”. She looks at you and asks if you play croquet.
+   1. Yes ma’am -> 5
+   2. What business is it of yours? -> 4
+1. The Queen gets red in the face and shouts “Off with her head!” But the king steps in and says that you are just a child. The queen says “Very well, but you shall now join us and play croquet or it will be off with your head!”. As you fall in, you see the gardeners coming to you saying “You have to help us, or we’ll lose our heads!”
+2. The Queen seems pleased and says “Very well, you shall join us in our game” As you fall in, you see the gardeners coming to you saying “You have to help us, or we’ll lose our heads!”
+   1. Sorry, that’s none of my concern -> 6
+   2. Help them hide -> 7
+1. You inform them that it wouldn’t be in your best interests to go against the Queen. As you walk to the game you glimpse them being led off by the guards. *Enter description of game here* Eventually you hear loud shouting. You investigate to find an argument about beheading the Cheshire cat. The King says that if there’s a head it must be beheadable, and the executioner says it can’t be beheaded without a body. They turn to you.
+2. You agree to hide them behind a potted plant. As you join the procession, you see the guards give up their search and walk away. *Enter description of game here* Eventually you hear loud shouting. You investigate to find an argument about beheading the Cheshire cat. The King says that if there’s a head it must be beheadable, and the executioner says it can’t be beheaded without a body. They turn to you.
+   1. Agree with the king -> 8
+   2. Agree with the executioner -> 9
+   3. Suggest they call for the cat’s owner -> 10
+1. The king looks very pleased with himself, but the executioner says that they must call for the Duchess to resolve the matter.
+2. The executioner looks very pleased with himself, but the king says that they must call for the Duchess to resolve the matter
+3. They agree and call for the Duchess
+
+
+Continue to Chapter 9
+________________
+Chapter 9
+
+
+1. The Duchess is brought in, but the Queen immediately threatens her and the Duchess runs off. The Queen then asks you if you’ve ever met the Gryphon
+   1. No ma’am, but I should like to -> 3
+   2. What the heck is a Gryphon? -> 2
+1. They Queen ignores your question and says that we must be off. She leads you to the Gryphon. The Queen introduces you and says that he should take you to see the Mock Turtle. They Gryphon then starts to lead you to the Mock Turtle.
+2. Very well, says the Queen, and she leads you off to the Gryphon. The Queen introduces you and says that he should take you to see the Mock Turtle. They Gryphon then starts to lead you to the Mock Turtle.
+   1. The Queen really is a piece of work, isn’t she? -> 4
+   2. Who is the Mock Turtle -> 5
+1. The Queen just likes to say “Off with their heads” all the time, they never really execute anybody. Ah here’s the Mock Turtle now. You hear sorrowful wailing and come to the Mock Turtle on a rock. He stops wailing to say hello, then continues on.
+2. The Mock Turtle sings all sorrowful and such, but he’s got no real sorrow. Ah, here he is now. You hear sorrowful wailing and come to the Mock Turtle on a rock. He stops wailing to say hello, then continues on.
+   1. Why are you called the Mock Turtle? -> 7
+   2. Wait to see what happens. -> 6
+1. The Gryphon interrupts and asks the Mock Turtle to tell his story, and so the Mock Turtle does, talking about his school and such. After a while, the Gryphon interrupts and says they must be off to a trial.
+2. The Mock Turtle explains that he used to be a Turtle, but now he isn’t anymore, and then begins to tell his story.  After a while, the Gryphon interrupts and says they must be off to a trial.
+
+
+Continue to Chapter 10
+________________
+Chapter 10
+
+
+1. You come to a courtroom with the Knave of Hearts on trial for stealing tarts. As the trial proceeds you hear a loud squeaking from Bill’s pencil in the jury box.
+   1. Take Bill’s pencil
+   2. Suffer through
+1. You quietly sneak behind Bill and steal his pencil without his noticing. You see him panic and try to write with his finger. You sit back down next to the Dormouse, who exclaims that you seem to be growing.
+2. You decide to just suffer through the squeaking. However, the Dormouse sitting next to you exclaims that you seem to be growing.
+   1. I can’t help growing, so deal with it
+   2. I’m sorry, but I can’t seem to help it
+1. The Dormouse harrumphs and states that it isn’t proper and gets up to move elsewhere. Eventually, you are called to the stand to testify.
+   1. Make your way through the crowd
+   2. Make your way around the crowd
+1. As you walk up to the stand through the crowd, your large size bumps and jostles many in attendance. The king cites rule 42 and says you must exit the court.
+2. As you walk around the crowd you bump into the jury box and knock it over, forcing you to try to quickly set it back up. The king cites rule 42 and says you must exit the court.
+   1. Refuse
+   2. Comply
+1. As you try to exit the courtroom, you find that you are too big to get through. The king and queen are agitated by this and declare that you be executed. However, just as the guards start to attack you, you wake up and find yourself nestled comfortably under an oak tree. You realize it was all a dream.
+2. As you stubbornly refuse, the queen and king become angry and declare that you be executed. However, just as the guards start to attack you, you wake up and find yourself nestled comfortably under an oak tree. You realize it was all a dream.

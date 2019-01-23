@@ -167,6 +167,123 @@ public class Main {
 
     //Chapter 7 method
     private static void chapter7(Player p) {
+        //1
+        System.out.println("As you walk along you come across a house. You can see a tea party going on with a Hatter, a Hare, and a Dormouse. As you approach the table they begin shouting \"No room! No room\"");
+        System.out.println("(1) Sit down anyway\n(2) Leave");
+
+        int choice = cleanInput(userInput.nextLine());
+
+        if (choice == 1) {
+            //2
+            System.out.println("You ignore their cries and sit at the table anyway. They give you a side-glance but start to ignore you. Eventually, the Hatter suddenly asks \"How is a raven like a writing desk?\"");
+            System.out.println("(1) \"I don't know\"\n(2) \"What kind of question is that?\"\n(3) Leave");
+
+            choice = cleanInput(userInput.nextLine());
+
+            if (choice ==1) {
+                //3
+                System.out.println("\"Well that's just as well\" responds the Hatter, \"as I don't know either! Would you like a cup of tea?\"");
+            }else if (choice == 2) {
+                //4
+                System.out.println("\"It's a riddle I've heard that I can't quite figure out\" responds the Hatter, \"Would you like some tea?\"");
+            } else if (choice == 3) {
+                //12
+                System.out.println("You decide that this tea party seems quite ridiculous and is not at all a place you'd like to remain. So you leave the area and continue walking");
+                return;
+            }
+            System.out.println("(1) Accept the tea\n(2) Decline the tea\n(3) Leave the tea party");
+
+            choice = cleanInput(userInput.nextLine());
+
+            if (choice == 1) {
+                //6
+                System.out.println("As the Hatter pours you a drink, he suddenly exclaims \"Oh! Do you know Time\"");
+            } else if (choice == 2) {
+                //5
+                System.out.println("Quite ignoring you, the Hatter begins pouring tea into your teacup. As he does this, he suddenly exclaims \"Do you know Time?\"");
+            } else if (choice == 3) {
+                //12
+                System.out.println("You decide that this tea party seems quite ridiculous and is not at all a place you'd like to remain. So you leave the area and continue walking");
+                return;
+            }
+            System.out.println("(1) \"I have no idea what time it is\"\n(2) \"I would assume it's tea time\"\n(3) Leave the tea party");
+
+            choice = cleanInput(userInput.nextLine());
+
+            if (choice == 1) {
+                //7
+                System.out.println("\"I'll say you don't!\" exclaims the Hatter, \"Otherwise you'd know Time is a \"he\" and not an \"it.\"\nHe and I got into an argument once, and now he's frozen time for me so that now it's always tea time!\"");
+            } else if (choice == 2) {
+                //8
+                System.out.println("\"Well of course it's tea time, it's always tea time!\" cries the Hatter, \"Ever since I argued with Time himself he's frozen time for me right now at tea time!\"");
+            } else if (choice == 3) {
+                //12
+                System.out.println("You decide that this tea party seems quite ridiculous and is not at all a place you'd like to remain. So you leave the area and continue walking");
+                return;
+            }
+            System.out.println("(1) \"I'd say that's quite ridiculous\"\n(2) \"Oh, how unfortunate!\"\n(3) Leave the tea party");
+
+            choice = cleanInput(userInput.nextLine());
+
+            if (choice == 1) {
+                //13
+                System.out.println("\"Well,\" scoffs the Hatter, \"I should say it's quite rude to barge in on people's tea parties and then disagree with them. Be off with you at once\"\nYou decide it best not to argue, so you leave the tea party, and continue on your way");
+                return;
+            } else if (choice == 2) {
+                //9
+                System.out.println("\"Unfortunate indeed\" says the Hatter, \"Now, how about a story from our esteemed Dormouse?\"\nWith that, the Dormouse begins a story, a long one with many pompous airs, but interesting nonetheless");
+            } else if (choice == 3) {
+                //12
+                System.out.println("You decide that this tea party seems quite ridiculous and is not at all a place you'd like to remain. So you leave the area and continue walking");
+                return;
+            }
+            System.out.println("(1) Tell the Dormouse about your amazing cat\n(2) Keep listening to the story\n(3) Leave this ridiculous situation");
+
+            choice = cleanInput(userInput.nextLine());
+
+            if (choice == 1) {
+                //14
+                System.out.println("At the mention of the word \"cat\" the Dormouse begins to squeak and thrash wildly. The Hatter and the Hare begin frantically trying to calm him as plates and dishes crash all around. You decide it best to be on your way, so you leave the table and start walking");
+                return;
+            } else if (choice == 2) {
+                //10
+                System.out.println("The Dormouse finishes his story with a flourish and begins to doze off. The Hatter and the Hare start chattering together as they continue drinking their tea. The Hare offers you another cup as well");
+            } else if (choice == 3) {
+                //12
+                System.out.println("You decide that this tea party seems quite ridiculous and is not at all a place you'd like to remain. So you leave the area and continue walking");
+                return;
+            }
+            System.out.println("(1) Accept the tea\n(2) Thank them and leave\n(3) Just leave");
+
+            choice = cleanInput(userInput.nextLine());
+
+            if (choice == 1) {
+                //11
+                do {
+                    System.out.println("The Hare pours you a glass, then resumes chatting with the Hatter. Eventually you empty you cup and the Hare offers you another");
+                    System.out.println("(1) Accept the tea\n(2) Thank them and leave\n(3) Just leave");
+
+                    choice = cleanInput(userInput.nextLine());
+
+                    if (choice == 3) {
+                        //12
+                        System.out.println("You decide that this tea party seems quite ridiculous and is not at all a place you'd like to remain. So you leave the area and continue walking");
+                        return;
+                    }
+                } while (choice == 1);
+            } else if (choice == 3) {
+                //12
+                System.out.println("You decide that this tea party seems quite ridiculous and is not at all a place you'd like to remain. So you leave the area and continue walking");
+                return;
+            }
+
+            //15
+            System.out.println("You thank the Hatter, Hare, and the sleeping Dormouse for allowing your company, then continue on your way");
+            return;
+        }
+
+        //12
+        System.out.println("You decide that this tea party seems quite ridiculous and is not at all a place you'd like to remain. So you leave the area and continue walking");
 
     }
 

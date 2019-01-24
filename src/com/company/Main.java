@@ -6,13 +6,10 @@ package com.company;
  * original Alice in Wonderland novel by Lewis Carroll
  */
 
-import java.util.Random;
 import java.util.Scanner;
 
 //Driving class, runs the game
 public class Main {
-    //The random for height generation and other features
-    private static Random randy = new Random();
     //The scanner for user input
     private static Scanner userInput = new Scanner(System.in);
     //Array of food items available
@@ -40,29 +37,6 @@ public class Main {
 
     //The game itself
     private static void game(Player p) {
-        //Old code from first prototype
-        /*//Main branch
-        System.out.println("You find yourself in a strange room, theres a table laden with various foods and drinks");
-        //Option
-        System.out.println("(1) Eat or drink something from the table\n(2) Take food or drink from the table");
-        String choice1 = userInput.nextLine();
-        //Branch one
-        if(cleanInput(choice1) == 1) {
-            System.out.println("You choose to consume an item off the table");
-            Food temp = foodItems[randy.nextInt(foodItems.length-1)];
-            System.out.println("You picked a " + temp.getName() + " off the table");
-            changePlayerHeight(p, temp);
-        } else if(cleanInput(choice1) == 2) {
-            //Temporary new food
-            Food temp;
-            //Gets the food itself from master list
-            temp = foodItems[randy.nextInt(foodItems.length-1)];
-            //Tells player what they picked up
-            System.out.printf("You pickup a %s and put it into your bag", temp.getName());
-            //Adds item to player inventory
-            p.inventory.add(temp);
-        }*/
-
         //Calling of chapter methods
         chapter1(p);
         chapter2(p);
@@ -147,7 +121,68 @@ public class Main {
 
     //Chapter 3 method
     private static void chapter3(Player p) {
-
+        //1
+        System.out.println("You awaken to find yourself on a small island in what seems to be a large lake.\n" +
+                "Tha last thing you remember is being quite upset and passing out while crying.\n" +
+                "You see a distant shore with come creatures upon it and begin swimming towards them\n" +
+                "As you approach you must decide how you want to handle these creatures\n" +
+                "(1) Ask them for help drying off\n" +
+                "(2) WHY ARE THESE ANIMALS SPEAKING ENGLISH");
+        int choice = cleanInput(userInput.nextLine());
+        if(choice == 1) { //Choice 1 p1, goto 2
+            System.out.println("You ask the animals for some help drying yourself off.");
+        } else { //Choice 1, p2, goto 3
+            System.out.println("The animals seem to ignore you shouting at them.  You yell \"Why are you ignoring me!\"");
+        }
+        //3
+        System.out.println("A mouse who seems to be the leader of the little group yell out loudly\n" +
+                "\"How about we have a caucus race?\"\n" +
+                ((choice == 1)? "It will help you dry off the mouse says to you\n" : "") +
+                "Do you decide to: \nJoin in their race (1)\nSit out by yourself? (2)");
+        choice = cleanInput(userInput.nextLine());
+        if(choice == 1){ //choice #2 p1, goto 5
+            //5
+            System.out.println("You join the caucus race, as you sprint around without a destination like the other animals you feel yourself begin to dry off from the wind.");
+        } else { //choice #2 p2, goto 4
+            //4
+            System.out.println("You sit off to the side cold and wet as the animals run around the area seemingly having the time of their lives");
+        }
+        //Prize demand from 4 and 5
+        System.out.println("After the race ends the animals surround you and begin to demand a prize for their efforts.\n" +
+                "Do you:\n(1) Give them some sweets you have in your pockets?\n(2) Or do you refuse to give them anything because the whole situation is ridiculous");
+        choice = cleanInput(userInput.nextLine());
+        int choiceExtend;
+        if(choice == 1) { //Choice 3 p1, goto 7
+            System.out.println("You give into the animals demands and pull enough candy from your pocket that each creature present gets one piece");
+            choiceExtend = 1;
+        } else { //Choice 3 p2, goto 6
+            System.out.println("You refuse to give the animals a prize because it is a ridiculous situation\n" +
+                    "This causes the animals to begin loudly complaining, demanding that you give them a prize.\n" + //6
+                    "Do you:\n" +
+                    "(1) Give in?\n" +
+                    "(2) Stand firm");
+            choice = cleanInput(userInput.nextLine());
+            if(choice == 1) {//Choice 4 p1, goto 7
+                System.out.println("You decide to give into the animals demands, and give them some sweets from your pockets");
+                choiceExtend = 1;
+            } else {//Choice 4 p2, goto 8
+                System.out.println("You stand firm in your decision to not give into the animals.");
+                choiceExtend = 2;
+            }
+        }
+        if(choiceExtend == 1) { //7
+            System.out.println("You listen as the animals begin telling stories about their lives and other things\n" +
+                    "Do you:\n(1) Mention your pet cat?\n(2) Listen quietly");
+            choice = cleanInput(userInput.nextLine());
+            if(choice == 1) { //Choice 5 p1, goto 9
+                System.out.println("The animals become angry with you and depart in various directions");
+            } else { //Choice 5 p2, goto 10
+                System.out.println("The animals finish their stories and begin to disperse to their various homes");
+            }
+        } else { //8
+            System.out.println("The animals are upset with you and depart in various directions");
+        }
+        System.out.println("Part 2 complete");
     }
 
     //Chapter 4 method

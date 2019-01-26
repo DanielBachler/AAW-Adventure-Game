@@ -10,6 +10,7 @@ public class Player {
     private String playerName;
     //Player current height (ft)
     private double playerHeight;
+    private double originalHeight;
 
 
     //Getter and setter for name
@@ -31,4 +32,12 @@ public class Player {
         return playerHeight;
     }
 
+    //Setter and getter for ogHeight
+    public void setOriginalHeight(double ogH) {
+        originalHeight = ogH;
+    }
+
+    public double getOriginalHeight() {
+        return this.originalHeight;
+    }
 }

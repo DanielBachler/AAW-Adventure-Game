@@ -26,8 +26,9 @@ public class Main {
         float height = userInput.nextFloat();
         //Fixes control flow
         userInput.nextLine();
-        //Assigns player height
+        //Assigns player height to both vars
         player.setPlayerHeight(height);
+        player.setOriginalHeight(height);
         //Starts game
         System.out.println("The game starts now " + userName + "!");
         //Assigns player name
@@ -237,48 +238,59 @@ public class Main {
     //Chapter 5 method
     private static void chapter5(Player p) {
         //1
-        System.out.println();
+        System.out.println("As you walk along you see a caterpillar sitting on a mushroom, the strange part though is that said caterpillar seems to be smoking a hooka!\n" +
+                "He asks \"Who are you?\"  How do you answer?\n" +
+                "(1) Your name\n(2) I don't know anymore");
         int choice = cleanInput(userInput.nextLine());
         if(choice == 1) {
             //2
-            
+            System.out.println("\"My name is " + p.getPlayerName() + ".\"" +
+                    "The caterpillar says \"Wrong you are very different from that person\"");
         } else if(choice == 2) {
             //3
-            System.out.println();
-            choice = cleanInput(userInput.nextLine());
-            if(choice == 1) {
-                //4
-
-            } else if(choice == 2) {
-                //5
-
-            }
-            choice = cleanInput(userInput.nextLine());
-            if(choice == 1) {
-                //6
-
-            } else if(choice == 2) {
-                //7
-
-            }
+            System.out.println("\"I don't know anymore!\"  The caterpillar says \"That's ridiculous!\"");
         }
+        System.out.println("Do you lament about:\n(1) Your confusion\n(2) Your size");
+        choice = cleanInput(userInput.nextLine());
+        if(choice == 1) {
+            //4
+            System.out.println("The caterpillar begins reciting famous quotes from various Greek philosophers, after a few quotes he begins to move away.\n" +
+                    "\"By the way, one side of the mushroom makes you grow and one makes you shrink.  Good luck!\"");
+        } else if(choice == 2) {
+            //5
+            System.out.println("The caterpillar looks strangely at you, and beings to move away.\n" +
+                    "\"By the way, one side of the mushroom makes you grow and one makes you shrink.  Good luck!\"");
+        }
+        System.out.println("Do you eat the\n(1) Right side\n(2) Left side");
+        choice = cleanInput(userInput.nextLine());
+        if(choice == 1) {
+            //6
+            System.out.println("You take a few bites from the right side of the mushroom, and begin to shrink even smaller!\n" +
+                    "\"Oh this just won't do\" you say as you eat from the left side to regain your height.");
+        }
+        //7
+        System.out.println("You take a few bites from the left side and regrow to your normal height.");
+        p.setPlayerHeight(p.getOriginalHeight());
         System.out.println("End of part 4");
     }
 
     //Chapter 6 method
     private static void chapter6(Player p) {
         //1
-        System.out.println();
+        System.out.println("As you walk you come across a house with a footman at the door\n" +
+                "Do you \n(1) Talk to the footman\n(2) Keep walking");
         int choice = cleanInput(userInput.nextLine());
         if(choice == 1) {
             //2
-            System.out.println();
+            System.out.println("As you approach the footman, you can hear crashing and yelling from inside the house\n" +
+                    "Do you\n(1) Knock on the door\n(2) Walk inside");
             choice = cleanInput(userInput.nextLine());
             if(choice == 1) {
                 //3
                 boolean go = true;
                 while(go) {
-                    System.out.println();
+                    System.out.println("The footman tells you that knocking is of no use.\n" +
+                            "Do you\n(1) Keep knocking\n(2) Walk inside");
                     choice = cleanInput(userInput.nextLine());
                     if(choice == 2) {
                         go = false;
@@ -286,27 +298,29 @@ public class Main {
                 }
             }
             //4
-            System.out.println();
+            System.out.println("As you walk in you see a cook, the duchess and a baby all shouting and complaining\n" +
+                    "Do you\n(1) Walk away\n(2) Stay to see what all the fuss is about");
             choice = cleanInput(userInput.nextLine());
             if(choice == 1) {
                 //5
-                System.out.println();
+                System.out.println("You leave the house and head on your way");
             } else if(choice == 2) {
                 //6
-                System.out.println();
+                System.out.println("All the other occupants of the house begin to complain about pepper, and the duchess hands you the baby\n" +
+                        "\"Make sure to take good care of my baby you!\"\n" +
+                        "As you leave the house with the baby, it turns into a pig!  You think to yourself \"It makes a much better pig than a baby anyway!\"");
             }
         } else if(choice == 2) {
             //7
-            System.out.println();
+            System.out.println("You come to a crossroads where a chesire cat tells you to either go to the Mad Hatter's house of the March Hare's house\n" +
+                    "Do you go to\n(1) The Mad Hatter's house\n(2) The March Hare's house");
             choice = cleanInput(userInput.nextLine());
             if(choice == 1) {
                 //8
-                System.out.println();
+                System.out.println("You reach the Mad Hatter's house and see a note on the door that says \"Gone to tea\"\n" +
+                        "You decide that you should try the March Hare's house instead");
                 //10
                 //Somehow skip next part
-            } else if(choice == 2) {
-                //9
-                System.out.println();
             }
         }
         System.out.println("End of part 5");

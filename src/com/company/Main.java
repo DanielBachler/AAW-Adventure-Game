@@ -236,12 +236,80 @@ public class Main {
 
     //Chapter 5 method
     private static void chapter5(Player p) {
+        //1
+        System.out.println();
+        int choice = cleanInput(userInput.nextLine());
+        if(choice == 1) {
+            //2
+            
+        } else if(choice == 2) {
+            //3
+            System.out.println();
+            choice = cleanInput(userInput.nextLine());
+            if(choice == 1) {
+                //4
 
+            } else if(choice == 2) {
+                //5
+
+            }
+            choice = cleanInput(userInput.nextLine());
+            if(choice == 1) {
+                //6
+
+            } else if(choice == 2) {
+                //7
+
+            }
+        }
+        System.out.println("End of part 4");
     }
 
     //Chapter 6 method
     private static void chapter6(Player p) {
-
+        //1
+        System.out.println();
+        int choice = cleanInput(userInput.nextLine());
+        if(choice == 1) {
+            //2
+            System.out.println();
+            choice = cleanInput(userInput.nextLine());
+            if(choice == 1) {
+                //3
+                boolean go = true;
+                while(go) {
+                    System.out.println();
+                    choice = cleanInput(userInput.nextLine());
+                    if(choice == 2) {
+                        go = false;
+                    }
+                }
+            }
+            //4
+            System.out.println();
+            choice = cleanInput(userInput.nextLine());
+            if(choice == 1) {
+                //5
+                System.out.println();
+            } else if(choice == 2) {
+                //6
+                System.out.println();
+            }
+        } else if(choice == 2) {
+            //7
+            System.out.println();
+            choice = cleanInput(userInput.nextLine());
+            if(choice == 1) {
+                //8
+                System.out.println();
+                //10
+                //Somehow skip next part
+            } else if(choice == 2) {
+                //9
+                System.out.println();
+            }
+        }
+        System.out.println("End of part 5");
     }
 
     //Chapter 7 method

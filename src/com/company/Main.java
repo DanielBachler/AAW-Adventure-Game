@@ -1,6 +1,6 @@
 package com.company;
 /**
- * Daniel Bachler
+ * Daniel Bachler and Jase Rost
  * Choose your own adventure game for LIT-169 Assignment 1
  * A simple text based choose your own adventure game based roughly on the
  * original Alice in Wonderland novel by Lewis Carroll
@@ -13,7 +13,7 @@ public class Main {
     //The scanner for user input
     private static Scanner userInput = new Scanner(System.in);
     //Array of food items available
-    private static Food[] foodItems = {new Food("Muffin", 1), new Food( "Cupcake", -10),new Food( "Cake", 5), new Food("Soup", -1), new Food("Tea", 1), new Food("Mystery liquid", -1)};
+    private static Food[] foodItems = {new Food("Muffin", 1), new Food( "Cupcake", -10),new Food( "Cake", 5), new Food("Soup", -1), new Food("Tea", 1), new Food("Mystery liquid", 20)};
 
     public static void main(String[] args) {
         //Creates player object
@@ -26,8 +26,9 @@ public class Main {
         float height = userInput.nextFloat();
         //Fixes control flow
         userInput.nextLine();
-        //Assigns player height
+        //Assigns player height to both vars
         player.setPlayerHeight(height);
+        player.setOriginalHeight(height);
         //Starts game
         System.out.println("The game starts now " + userName + "!");
         //Assigns player name
@@ -56,6 +57,8 @@ public class Main {
             return 1;
         } else if(input.contains("2")) {
             return 2;
+        } else if(input.contains("3")){
+            return 3;
         } else {
             return 0;
         }
@@ -187,17 +190,140 @@ public class Main {
 
     //Chapter 4 method
     private static void chapter4(Player p) {
-
+        //1
+        System.out.println("You are walking along and see the white rabbit again.  He approaches you and says \n" +
+                "\"Greetings again " + p.getPlayerName() + " could you go retrieve some things for the duchess?\"\n" +
+                "(1) Agree to go get the items\n(2) Refuse to get the items");
+        int choice = cleanInput(userInput.nextLine());
+        if(choice == 1) { //2
+            System.out.println("You walk to the rabbit's house to retrieve the items he asked for.\n" +
+                    "Along with the items you see a small bottle containing a fluid you don't recognize.\n" +
+                    "Do you: \n" +
+                    "(1) Just grab the items?\n(2) Drink the mystery fluid?\n");
+            choice = cleanInput(userInput.nextLine());
+            if(choice == 1) {
+                //Grab items and add to inv, chapter ends
+                System.out.println("You pickup the stuff for the duchess only and leave the house to find the rabbit.");
+                Item duchessStuff = new Item();
+                duchessStuff.setName("The Duchess's Items");
+                p.inventory.add(duchessStuff);
+            } else if(choice == 2){
+                //3
+                System.out.println("You pickup and drink the mystery fluid.");
+                changePlayerHeight(p, foodItems[5]);
+                System.out.println("You begin to panic due to your new massive size, from outside you hear\n" +
+                        "\"Hey, Billy!  Why don't ya go down the chimney to see whats going on inside.\"\n" +
+                        "Do you want to:\n(1) Kick Billy as he comes down?\n(2) Let Billy come in.\n");
+                choice = cleanInput(userInput.nextLine());
+                if(choice == 1) {
+                    //5
+                    System.out.println("You decide to kick Billy as he comes down the chimney.\n" +
+                            "Billy is launched out of the chimney and the animals outside get angry with you.\n" +
+                            "They begin to pelt you with stones that for some reason shrink you back to your normal height.");
+                    p.setPlayerHeight(p.getPlayerHeight() - foodItems[5].getChangeAmount());
+                } else if(choice == 2){
+                    //4
+                    System.out.println("Billy arrives in the room, he runs to the kitchen to get a slice of shrinking cake.\n" +
+                            "He gives you the cake and you shrink back to your normal height.");
+                    p.setPlayerHeight(p.getPlayerHeight() - foodItems[5].getChangeAmount());
+                }
+            }
+        } else {
+            //Refusal, ends chapter
+            System.out.println("You refuse the rabbit's demands and move on.");
+        }
+        System.out.println("End of part 3");
     }
 
     //Chapter 5 method
     private static void chapter5(Player p) {
-
+        //1
+        System.out.println("As you walk along you see a caterpillar sitting on a mushroom, the strange part though is that said caterpillar seems to be smoking a hooka!\n" +
+                "He asks \"Who are you?\"  How do you answer?\n" +
+                "(1) Your name\n(2) I don't know anymore");
+        int choice = cleanInput(userInput.nextLine());
+        if(choice == 1) {
+            //2
+            System.out.println("\"My name is " + p.getPlayerName() + ".\"" +
+                    "The caterpillar says \"Wrong you are very different from that person\"");
+        } else if(choice == 2) {
+            //3
+            System.out.println("\"I don't know anymore!\"  The caterpillar says \"That's ridiculous!\"");
+        }
+        System.out.println("Do you lament about:\n(1) Your confusion\n(2) Your size");
+        choice = cleanInput(userInput.nextLine());
+        if(choice == 1) {
+            //4
+            System.out.println("The caterpillar begins reciting famous quotes from various Greek philosophers, after a few quotes he begins to move away.\n" +
+                    "\"By the way, one side of the mushroom makes you grow and one makes you shrink.  Good luck!\"");
+        } else if(choice == 2) {
+            //5
+            System.out.println("The caterpillar looks strangely at you, and beings to move away.\n" +
+                    "\"By the way, one side of the mushroom makes you grow and one makes you shrink.  Good luck!\"");
+        }
+        System.out.println("Do you eat the\n(1) Right side\n(2) Left side");
+        choice = cleanInput(userInput.nextLine());
+        if(choice == 1) {
+            //6
+            System.out.println("You take a few bites from the right side of the mushroom, and begin to shrink even smaller!\n" +
+                    "\"Oh this just won't do\" you say as you eat from the left side to regain your height.");
+        }
+        //7
+        System.out.println("You take a few bites from the left side and regrow to your normal height.");
+        p.setPlayerHeight(p.getOriginalHeight());
+        System.out.println("End of part 4");
     }
 
     //Chapter 6 method
     private static void chapter6(Player p) {
-
+        //1
+        System.out.println("As you walk you come across a house with a footman at the door\n" +
+                "Do you \n(1) Talk to the footman\n(2) Keep walking");
+        int choice = cleanInput(userInput.nextLine());
+        if(choice == 1) {
+            //2
+            System.out.println("As you approach the footman, you can hear crashing and yelling from inside the house\n" +
+                    "Do you\n(1) Knock on the door\n(2) Walk inside");
+            choice = cleanInput(userInput.nextLine());
+            if(choice == 1) {
+                //3
+                boolean go = true;
+                while(go) {
+                    System.out.println("The footman tells you that knocking is of no use.\n" +
+                            "Do you\n(1) Keep knocking\n(2) Walk inside");
+                    choice = cleanInput(userInput.nextLine());
+                    if(choice == 2) {
+                        go = false;
+                    }
+                }
+            }
+            //4
+            System.out.println("As you walk in you see a cook, the duchess and a baby all shouting and complaining\n" +
+                    "Do you\n(1) Walk away\n(2) Stay to see what all the fuss is about");
+            choice = cleanInput(userInput.nextLine());
+            if(choice == 1) {
+                //5
+                System.out.println("You leave the house and head on your way");
+            } else if(choice == 2) {
+                //6
+                System.out.println("All the other occupants of the house begin to complain about pepper, and the duchess hands you the baby\n" +
+                        "\"Make sure to take good care of my baby you!\"\n" +
+                        "As you leave the house with the baby, it turns into a pig!  You think to yourself \"It makes a much better pig than a baby anyway!\"");
+            }
+        } else if(choice == 2) {
+            //7
+            System.out.println("You come to a crossroads where a chesire cat tells you to either go to the Mad Hatter's house of the March Hare's house\n" +
+                    "Do you go to\n(1) The Mad Hatter's house\n(2) The March Hare's house");
+            choice = cleanInput(userInput.nextLine());
+            if(choice == 1) {
+                //8
+                System.out.println("You reach the Mad Hatter's house and see a note on the door that says \"Gone to tea\"\n" +
+                        "You decide that you should try the March Hare's house instead");
+                //10
+                //Somehow skip next part
+            }
+        }
+        System.out.println("End of part 5");
     }
 
     //Chapter 7 method

@@ -534,8 +534,14 @@ public class Main {
 
         if (choice == 1) {
             //3
+            System.out.println("\"Very good\" the Queen responds, and begins to lead you off. You eventually come across a Gryphon");
+            System.out.println("\"Ah, Mr. Gryphon\" says the Queen, \"You should take this fine child to meet the Mock Turtle\"");
+            System.out.println("\"My pleasure ma'am\" the Gryphon responds, \"Follow me then.\" He motions for you to follow and you begin walking off together");
         } else if (choice == 2) {
             //2
+            System.out.println("The Queen quite ignores your question and begins to lead you away from croquet grounds. You eventually come across a Gryphon");
+            System.out.println("\"Ah, Mr. Gryphon\" says the Queen, \"You should take this fine child to meet the Mock Turtle\"");
+            System.out.println("\"My pleasure ma'am\" the Gryphon responds, \"Follow me then.\" He motions for you to follow and you begin walking off together");
         }
         System.out.println("(1) The Queen really is a piece of work, isn't she?\n(2) Who is this Mock Turtle");
 
@@ -543,8 +549,14 @@ public class Main {
 
         if (choice == 1) {
             //4
+            System.out.println("\"Oh her? She just likes to shout \'Off with their heads\' all the time,\" said the Gryphon, \"They never really executes anybody. Ah, we're getting close to the Mock Turtle now\"");
+            System.out.println("You hear some faint, sorrowful wailing in the distance. As you keep walking, it get louder and louder until you find the source: a creature looking very much like a turtle sitting on a large rock overlooking the sea");
+            System.out.println("As you approach the Mock Turtle he ceases his wailing long enough to say hello, then continues his wailing");
         } else if (choice == 5) {
             //5
+            System.out.println("\"Oh him? He likes to sing all sorrowful and stuff, but he's got no real sorrow,\" responds the Gryphon, \"Ah, we're coming up on him now\"");
+            System.out.println("You hear some faint, sorrowful wailing in the distance. As you keep walking, it get louder and louder until you find the source: a creature looking very much like a turtle sitting on a large rock overlooking the sea");
+            System.out.println("As you approach the Mock Turtle he ceases his wailing long enough to say hello, then continues his wailing");
         }
         System.out.println("(1) And why are you called the Mock Turtle?\n(2) Try to wait it out");
 
@@ -552,8 +564,13 @@ public class Main {
 
         if (choice == 1) {
             //7
+            System.out.println("The Mock Turtle begins to spin you a long, sad story of how he used to be a Turtle, but was not anymore because he couldn't finish schooling.");
+            System.out.println("After listening to the story for some time, the Gryphon suddenly interrupts, saying that there's a trial about to start that you must attend. He begins leading you away from the Mock Turtle");
         } else if (choice == 2) {
             //6
+            System.out.println("After a while the Gryphon interrupts the Mock Turtle's wailing and asks him to tell you his story");
+            System.out.println("The Mock Turtle begins to spin you a long, sad story of how he used to be a Turtle, but was not anymore because he couldn't finish schooling.");
+            System.out.println("After listening to the story for some time, the Gryphon suddenly interrupts, saying that there's a trial about to start that you must attend. He begins leading you away from the Mock Turtle");
         }
     }
 
@@ -569,8 +586,12 @@ public class Main {
 
         if (choice == 1) {
             //2
+            System.out.println("You quietly sneak behind the jury box and steal Bill's pencil without his noticing. He begins to panic, searching for the pencil, before attempting to write with his finger, which is much quieter");
+            System.out.println("Satisfied, you sit back down in your seat. The Dormouse sitting next to you begins complaining that you're growing and that it's quite annoying");
         } else if (choice == 2) {
             //3
+            System.out.println("You decide to just suffer through the squeaking");
+            System.out.println("Suddenly, the Dormouse sitting next to you nudges you, \"Excuse me, but you are starting to grow quite large. Would you stop it?\"");
         }
         System.out.println("(1) Well I can't help it, so deal with it!\n(2) I'm terribly sorry, but I can't seem to help it");
 
@@ -585,15 +606,23 @@ public class Main {
 
         if (choice == 1) {
             //5
+            System.out.println("As you walk up to the stand through the crowd, your large size bumps and jostles many of the people in attendance, prompting many cries of discomfort and anger");
+            System.out.println("When you get to the front, the king pounds his gavel \"Rule 42 of the court: all persons over a mile high must leave the court\"");
         } else if (choice == 2) {
             //6
+            System.out.println("As you walk around the crowd to the front of the court, you bump the jury box, sending all of the jurors flying out and scattered all over the floor. You hurriedly  pick up all the jurors and put them back into the box");
+            System.out.println("When you get to the front, the king pounds his gavel \"Rule 42 of the court: all persons over a mile high must leave the court\"");
         }
         System.out.println("(1) Refuse\n(2) Comply");
 
         if (choice == 1) {
             //8
+            System.out.println("As you stubbornly refuse, the Queen and King become quite angry at you. \"Off with her head!\" the Queen begins shouting. The guards in the room begin rushing toward you, climbing on each others' shoulders to reach your head");
         } else if (choice == 2) {
             //7
+            System.out.println("As you try exit the courtroom, you find that you are too big to fit through the door. The King and Queen become furious at you for not complying. \"Off with her head!\" the Queen begins shouting. The guards in the room begin rushing toward you, climbing on each others' shoulders to reach your head");
         }
+
+        System.out.println("\nSuddenly, you start awake, finding yourself nestled comfortably under an oak tree. You realize that it was all a dream");
     }
 }

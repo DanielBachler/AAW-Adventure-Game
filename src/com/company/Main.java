@@ -338,7 +338,7 @@ public class Main {
             System.out.println("Suddenly, the you hear trumpets sounding nearby, and a procession approaches, with a King and Queen clearly visible at the center.");
             System.out.println("The gardeners begin scrambling, but as the Queen approaches she looks down at them, \"I see what's going on here. Off with their heads!\"");
             System.out.println("As the gardeners begin to cry, she turns to you and looks you over. \"Do you play croquet?\" she asks");
-        } else if (choice == 2) {
+        } else if (choice == 1) {
             //3
             System.out.println("The gardeners continue painting furiously. Suddenly, the you hear trumpets sounding nearby, and a procession approaches, with a King and Queen clearly visible at the center.");
             System.out.println("The gardeners begin scrambling, but as the Queen approaches she looks down at them, \"I see what's going on here. Off with their heads!\"");

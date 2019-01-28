@@ -319,8 +319,6 @@ public class Main {
                 //8
                 System.out.println("You reach the Mad Hatter's house and see a note on the door that says \"Gone to tea\"\n" +
                         "You decide that you should try the March Hare's house instead");
-                //10
-                //Somehow skip next part
             }
         }
         System.out.println("End of part 5");
@@ -329,7 +327,7 @@ public class Main {
     //Chapter 7 method
     private static void chapter7(Player p) {
         //1
-        System.out.println("As you walk along you come across a house. You can see a tea party going on with a Hatter, a Hare, and a Dormouse. As you approach the table they begin shouting \"No room! No room\"");
+        System.out.println("You make your way over to the March Hare's house. You can see a tea party going on with a Hatter, a Hare, and a Dormouse. As you approach the table they begin shouting \"No room! No room\"");
         System.out.println("(1) Sit down anyway\n(2) Leave");
 
         int choice = cleanInput(userInput.nextLine());
